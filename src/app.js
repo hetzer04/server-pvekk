@@ -5,7 +5,7 @@ const cors = require('cors');
 
 const authRoutes = require('./routes/authRoutes');
 const courseRoutes = require('./routes/courseRoutes');
-const initDB = require('./models/initDB');
+const initDB = require('./models/initDB'); // Убедитесь, что путь правильный
 
 dotenv.config();
 
@@ -38,4 +38,4 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Внутренняя ошибка сервера.' });
 });
 
-module.exports = app;
+module.exports = app; // Экспортируйте приложение без вызова app.listen()
